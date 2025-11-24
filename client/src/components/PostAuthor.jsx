@@ -25,7 +25,6 @@ const PostAuthor = ({ authorId, createdAt }) => {
 
   const formattedDate = createdAt ? format(new Date(createdAt), "PPP") : "Date unknown";
 
-  // Avatar: Cloudinary URL if full link, else fallback to local uploads
   const avatarUrl = author.avatar?.startsWith("http")
     ? author.avatar
     : `${process.env.REACT_APP_ASSETS_URL}/uploads/${author.avatar || "default-avatar.png"}`;
