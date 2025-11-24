@@ -3,7 +3,7 @@ import React from 'react'
 const ErrorPage = () => {
   return (
     <div>
-      rehnreggtgrt
+      Error Found
     </div>
   )
 }
