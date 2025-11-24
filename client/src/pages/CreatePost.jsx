@@ -30,7 +30,7 @@ const CreatePost = () => {
       let imageUrl = "";
       if (thumbnail) {
         const uploadRes = await uploadImage(thumbnail);
-        imageUrl = uploadRes.secure_url; // ✅ Cloudinary URL
+        imageUrl = uploadRes.secure_url; 
       }
 
       const response = await axios.post(
@@ -39,7 +39,7 @@ const CreatePost = () => {
           title,
           category,
           description,
-          thumbnail: imageUrl, // ✅ save URL, not file
+          thumbnail: imageUrl,
         },
         {
           withCredentials: true,
