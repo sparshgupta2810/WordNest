@@ -6,7 +6,6 @@ const PostItems = ({ postID, thumbnail, title, description, category, creator, c
   const shortDesc = description?.length > 100 ? `${description.substr(0, 100)}...` : description;
   const shortTitle = title?.length > 30 ? `${title.substr(0, 30)}...` : title;
 
-  // If thumbnail is a full Cloudinary URL, just use it
   const thumbnailUrl = thumbnail?.startsWith("http")
     ? thumbnail
     : `${process.env.REACT_APP_ASSETS_URL}/uploads/${thumbnail}`;
